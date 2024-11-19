@@ -1,0 +1,77 @@
+/* buttons.css */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn--secondary {
+    background-color: var(--color-gray-100);
+    color: var(--text-primary);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-gray-200);
+}
+
+.btn--full {
+    width: 100%;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    width: 100%;
+}
+
+.action-buttons .btn {
+    padding: var(--spacing-md);
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    border-radius: var(--radius-md);
+    background: var(--color-primary);
+    color: var(--color-white);
+    transition: all var(--transition-fast);
+}
+
+.action-buttons .btn:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.action-buttons .btn:active {
+    transform: translateY(0);
+}
+
+.modal-close-btn {
+    padding: 0.75rem 2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.modal-close-btn:hover {
+    background-color: #0056b3;
+}

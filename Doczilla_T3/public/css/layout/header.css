@@ -1,0 +1,39 @@
+/* header.css */
+.header {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__content {
+    width: 100%;
+    max-width: 1440px; /* Соответствует максимальной ширине контейнера */
+    padding: 0 var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__search {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: var(--spacing-sm);
+    }
+
+    .header__content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}

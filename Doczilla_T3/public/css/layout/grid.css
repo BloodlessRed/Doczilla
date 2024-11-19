@@ -1,0 +1,24 @@
+/* grid.css */
+.container {
+    display: grid;
+    grid-template-rows: var(--header-height) 1fr;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl);
+    height: calc(100vh - var(--header-height));
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        padding: var(--spacing-md);
+    }
+}

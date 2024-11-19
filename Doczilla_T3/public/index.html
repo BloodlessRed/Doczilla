@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with search -->
+        <header class="header">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Поиск задачи...">
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="action-buttons">
+                    <button class="btn" id="today-btn">Сегодня</button>
+                    <button class="btn" id="week-btn">На неделю</button>
+                </div>
+                
+                <div class="calendar-container" id="calendar"></div>
+                
+                <label class="filter-checkbox">
+                    <input type="checkbox" id="incomplete-only">
+                    <span>Только невыполненные</span>
+                </label>
+            </aside>
+
+            <!-- Tasks list -->
+            <section class="tasks-container">
+                <div class="tasks-header">
+                    <div class="current-date">Все задачи</div>
+                    <button class="sort-btn" id="sort-btn">
+                        Сортировать по дате ↓
+                    </button>
+                </div>
+
+                <div class="loader" style="display: none;">
+                    Загрузка...
+                </div>
+                <div class="task-list">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Window-->
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-title-section">
+                    <div class="modal-title"></div>
+                    <div class="modal-date"></div>
+                </div>
+                <div class="task-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </div>
+            </div>
+            <div class="modal-content"></div>
+            <div class="modal-footer">
+                <button class="modal-close-btn">Готово</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
